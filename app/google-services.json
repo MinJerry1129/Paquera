@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "986869575712",
+    "firebase_url": "https://blakechame.firebaseio.com",
+    "project_id": "blakechame",
+    "storage_bucket": "blakechame.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986869575712:android:bf4b766ce8f9c09d50cc45",
+        "android_client_info": {
+          "package_name": "com.blackcharm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986869575712-6kmnk2tu7t5fsaj88qhs1n9h04q0a4qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.blackcharm",
+            "certificate_hash": "93d6afdfded6bd51841801b560b942f4755c2cb4"
+          }
+        },
+        {
+          "client_id": "986869575712-k4k987sddert09q69enq1uav3oi8isfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi0EOzL50OQaNOHq5VYx91TAN8jvIoSkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986869575712-k4k987sddert09q69enq1uav3oi8isfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

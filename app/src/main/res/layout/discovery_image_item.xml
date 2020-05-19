@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:padding="4dp">
+  <com.theophrast.ui.widget.SquareImageView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:scaleType="centerCrop"
+      android:id="@+id/discovery_image_view"
+      android:adjustViewBounds="true">
+  </com.theophrast.ui.widget.SquareImageView>
+</LinearLayout>

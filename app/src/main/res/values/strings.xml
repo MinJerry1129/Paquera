@@ -1,0 +1,36 @@
+<resources>
+
+  <string name="app_name">Paquera</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Olá fragmento em branco</string>
+  <string name="confirm_age">Confirmo que tenho mais de 18 anos de idade.</string>
+  <string name="confirm_terms" formatted="false">Concordo com os termos estabelecidos nos
+    <![CDATA[ <font color="#FF2EAACE"><a href="http://blackcharm.the-work-kw.com/terms.php">Termos e Condições e</a></font> ]]>na
+    <![CDATA[ <font color="#FF2EAACE"><a href="http://blackcharm.the-work-kw.com/terms.php">Política de Privacidade</a></font> ]]>
+    do <![CDATA[ <font color="#FF2EAACE"><a href="http://blackcharm.the-work-kw.com/weare.php">Black Charm Paquera</a></font> ]]>.
+Entendo que não há tolerância para o upload de conteúdo censurável ou usuários abusivos.<![CDATA[ <br/> ]]>
+Para obter mais informações, consulte Obrigações e garantias dos membros em nossos Termos e Condições.
+    </string>
+  <string name="invite_text" formatted="false"><![CDATA[ <font color="#2EAACE">Convide seus amigos</font> ]]> e você estará conectado aos amigos deles. Black Charm trabalha com conexões.
+    Caso contrário, você poderá procurar apenas membros que não conhece.</string>
+  <string name="title_activity_profile_activity">Perfil_atividade</string>
+  <string name="facebook_app_id">545728102737113</string>
+
+
+  <string name="fb_login_protocol_scheme">fb545728102737113</string>
+
+  <string name="about_prompt">selecionar</string>
+
+  <string-array name="about_arrays">
+    <item>Um amigo</item>
+    <item>App Store</item>
+    <item>Play Store</item>
+    <item>Instagram</item>
+    <item>Facebook</item>
+    <item>BlackCharm website</item>
+    <item>BlackCharm meetup</item>
+    <item>Google</item>
+    <item>De outros</item>
+  </string-array>
+</resources>

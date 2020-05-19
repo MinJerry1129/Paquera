@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alienProfileContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfilePage.ProfilePageActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/alien_profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:subtitleTextColor="#f5fbff"
+        app:titleTextColor="#fff">
+
+        <TextView
+            android:id="@+id/discovery_view_toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/LightOrange"
+            android:textSize="@dimen/_15ssp"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="11.5dp"
+                android:background="@color/pale_grey_two" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/friendsline_like_button"
+                    style="@style/Widget.AppTheme.ProfileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="100dp"
+                    android:background="@color/LightOrange"
+                    android:backgroundTint="@color/LightOrange"
+                    android:paddingLeft="28dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="27dp"
+                    android:paddingBottom="3dp"
+                    android:text="LIKE"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/alien_profile_add_delete_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textColor="@color/CommonBlue"
+                    android:textColorHint="@color/CommonBlue"
+                    android:textSize="@dimen/_13ssp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/alien_profile_activity_image"
+                    app:layout_constraintTop_toBottomOf="@+id/alien_profile_activity_image" />
+
+                <TextView
+                    android:id="@+id/alien_profile_friend_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/LightOrange"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/alien_profile_add_delete_button"
+                    app:layout_constraintTop_toBottomOf="@+id/alien_profile_add_delete_button" />
+
+                <Button
+                    android:id="@+id/friendsline_contact_button"
+                    style="@style/Widget.AppTheme.ProfileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="144dp"
+                    android:background="@color/commonGrey"
+                    android:backgroundTint="@color/commonGrey"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="3dp"
+                    android:text="CONTACT"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/discovery_view_image"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="24.2dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/alien_profile_friend_of_friend_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text=""
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                           />
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/bt_discover_like"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" android:layout_marginRight="30dp">
+
+                                <info.androidhive.fontawesome.FontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fa_heart"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorAlet"
+                                    android:textSize="36sp"
+                                    app:solid_icon="true" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="FCurti"
+                                    android:textAlignment="center"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/bt_discover_message"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:layout_marginRight="30dp">
+
+                                <info.androidhive.fontawesome.FontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fa_envelope"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/tealish"
+                                    android:textSize="36sp"
+                                    app:solid_icon="true" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mensagerm"
+                                    android:textAlignment="center"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/bt_discover_share"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <info.androidhive.fontawesome.FontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fa_share_alt_solid"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/tealish"
+                                    android:textSize="36sp"
+                                    app:solid_icon="true" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Compartilhar"
+                                    android:textAlignment="center"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/alien_profile_blocked_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Bloqueado"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/alien_profile_activity_image"
+                    app:layout_constraintTop_toBottomOf="@+id/alien_profile_activity_image" />
+
+                <TextView
+                    android:id="@+id/discovery_view_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11.6dp"
+                    android:text="Craft Beer tasting = bar hop"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:text="The discovery:"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/discovery_view_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Porto Craft beer tasting bar hop" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:text="Location:"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textSize="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/discovery_view_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14dp"
+                        android:text="Porto city centre" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:text="Price:"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textSize="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/discovery_view_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14dp"
+                        android:text="€32 per person. 10-12 tasters, 1 reg beer" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Includes:"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/discovery_view_includes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14dp"
+                        android:text="10-12 tasters, 1 reg beer, 1 tour ticket"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:text="Aberto:"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/discovery_view_duarations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14dp"
+                        android:text="2.5 hrs" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp">
+                    <TextView
+                        android:text="Min age:"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/discovery_view_minage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14dp"
+                        android:text="18"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp">
+                    <TextView
+                        android:text="Min / Max group size:"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/discovery_view_groupsize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14dp"
+                        android:text="2 / 12"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9.8dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="email:"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            android:textColor="@color/LightOrange"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/discovery_view_email"
+                            android:text="discoveries@myfriendsroom.com"
+                            android:textSize="14dp"
+                            android:textColor="@color/LightOrange"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="website:"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            android:textColor="@color/LightOrange"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/discovery_view_website"
+                            android:text="www.myfriendsroom.com/discoveries"
+                            android:textSize="14dp"
+                            android:textColor="@color/LightOrange"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fone:"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            android:textColor="@color/LightOrange"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/discovery_view_phone"
+                            android:text="+44 208 374 3166"
+                            android:textSize="14dp"
+                            android:textColor="@color/LightOrange"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Instagram:"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            android:textColor="@color/LightOrange"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/discovery_view_instagram"
+                            android:text="portocraftbeer"
+                            android:textSize="14dp"
+                            android:textColor="@color/LightOrange"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mais informações"
+                        android:textColor="@color/commonGrey"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/discovery_view_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The emergence and growth of blogs in the late 1990s coincided with the advent of web publishing tools that facilitated the posting of content by non-technical users who did not have much experience with HTML or computer programming. Previously, a knowledge of such technologies as HTML and File Transfer Protocol had been required to publish content on the Web, and early Web users therefore tended to be hackers and computer enthusiasts. In the 2010s, the majority are interactive Web 2.0 websites, allowing visitors to leave online comments, and it is this interactivity that distinguishes them from other static websites.[2] In that sense, blogging can be seen as a form of social networking service. Indeed, bloggers do not only produce content to post on their blogs, but also often build social relations with their readers and other bloggers.[3] However, there are high-readership blogs which do not allow comments."
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="14dp" />
+                    <Button
+                        android:id="@+id/changeMoreInfoBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:padding="0dp"
+                        android:text="Mais"
+                        android:textAllCaps="false"
+                        android:textColor="@color/CommonBlue">
+
+                    </Button>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/discovery_view_image_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="20dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilePage.DiscoveryActivity"
+    android:orientation="vertical">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/profile_discovery_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:minHeight="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:titleTextColor="#fff"
+      app:subtitleTextColor="#f5fbff" app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:contentInsetLeft="0dp"
+      app:contentInsetStart="0dp"
+      tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/toolbar_discovery_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/LightOrange"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_gravity="center"
+        android:text="Vitrine Black"
+        android:textSize="@dimen/_15ssp"/>
+    <Button
+        android:id="@+id/toolbar_discovery_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novo"
+        android:textColor="@color/CommonBlue"
+        android:layout_gravity="right"
+
+        android:paddingRight="16dp" tools:layout_editor_absoluteY="14dp" tools:layout_editor_absoluteX="329dp"
+        style="@style/Widget.AppCompat.Button.Borderless" android:textAllCaps="false"
+        android:textColorHint="@color/CommonBlue" android:textSize="@dimen/_15ssp"/>
+
+  </androidx.appcompat.widget.Toolbar>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/discovery_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:paddingLeft="@dimen/_8ssp"
+      android:paddingRight="@dimen/_8ssp"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      tools:listitem="@layout/discovery_row" />
+
+</LinearLayout>

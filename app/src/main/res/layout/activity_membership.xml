@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfilePage.MembershipActivity">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DCEAEB"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:gravity="bottom"
+          android:orientation="vertical">
+        <com.asksira.loopingviewpager.LoopingViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:isInfinite="true"
+            app:autoScroll="true"
+            android:clipToPadding="false"
+            app:viewpagerAspectRatio="1.5"
+            app:scrollInterval="3000"
+            android:layout_gravity="center"/>
+
+        <com.rd.PageIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/viewpager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="8dp"
+            app:piv_animationType="slide"
+            app:piv_animationDuration="200"
+            app:piv_interactiveAnimation="true"
+            android:layout_gravity="center"/>
+
+<!--        <TextView-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="SAIBA QUEM"-->
+<!--            android:textColor="#fff"-->
+<!--            android:fontFamily="@font/helvetica_neu_bold"-->
+<!--            android:textSize="@dimen/_25ssp"/>-->
+<!--        <TextView-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="TE DEU LIKE!"-->
+<!--            android:textColor="#fff"-->
+<!--            android:fontFamily="@font/helvetica_neu_bold"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:textSize="@dimen/_28ssp"/>-->
+<!--        <TextView-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="VEJA QUEM CURTIU VOCE"-->
+<!--            android:textColor="@color/plan_black_green"-->
+<!--            android:fontFamily="@font/helvetica_neu_bold"-->
+<!--            android:textSize="@dimen/_13ssp"/>-->
+<!--        <TextView-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="INSTANTANEAMENTE"-->
+<!--            android:textColor="@color/plan_black_green"-->
+<!--            android:fontFamily="@font/helvetica_neu_bold"-->
+<!--            android:textSize="@dimen/_13ssp"/>-->
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_membership_6month"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/back_member2_button"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="6 meses por R$5,99"
+            android:textColor="@color/plan_black_green"
+            android:fontFamily="@font/helvetica_neu_bold"
+            android:textSize="@dimen/_13ssp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_membership_month"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/back_member2_button"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="1 mes por R$15,00"
+            android:textColor="@color/plan_black_green"
+            android:fontFamily="@font/helvetica_neu_bold"
+            android:textSize="@dimen/_13ssp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_membership_week"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_member2_button"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="1 semana por R$9,99"
+            android:textColor="@color/plan_black_green"
+            android:fontFamily="@font/helvetica_neu_bold"
+            android:textSize="@dimen/_13ssp" />
+      </LinearLayout>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Escolha um plano ideal para você"
+          android:textAlignment="center"
+          android:layout_marginBottom="20dp"
+          android:textSize="@dimen/_17ssp"
+          android:textColor="@color/instagramColor"/>
+    </LinearLayout>
+
+  </RelativeLayout>
+</LinearLayout>

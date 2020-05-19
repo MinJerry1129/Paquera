@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bottom_nav_pages.SearchActivity" android:id="@+id/fragmentFriendsLineContainer">
+
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/preview_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:titleTextColor="#fff"
+      app:subtitleTextColor="#f5fbff" app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:contentInsetLeft="0dp"
+      app:contentInsetStart="0dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/LightOrange"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_gravity="center"
+        android:text="Pré-visualização"
+        android:textSize="@dimen/_15ssp"/>
+
+  </androidx.appcompat.widget.Toolbar>
+
+
+  <ImageView
+      android:id="@+id/profile_search_image"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+
+      android:adjustViewBounds="true"
+      android:maxHeight="600dp"
+      android:minWidth="100dp"
+      android:minHeight="100dp"
+      android:scaleType="centerCrop"
+      app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/preview_toolbar"
+      app:layout_constraintVertical_bias="0.0" />
+
+  <Button
+      android:id="@+id/friendsline_profile_button"
+      android:layout_width="63dp"
+      android:layout_height="63dp"
+      android:layout_marginTop="22dp"
+      android:layout_marginEnd="22dp"
+      android:background="@drawable/rounded_button_tealish"
+      android:fontFamily="@font/helvetica_neue_medium"
+      android:gravity="center"
+      android:lineSpacingExtra="1sp"
+      android:text="ver perfil"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      android:textSize="13sp"
+      app:layout_constraintEnd_toEndOf="@+id/profile_search_image"
+      app:layout_constraintTop_toBottomOf="@+id/friendsline_contact_button" />
+
+  <Button
+      android:id="@+id/friendsline_contact_button"
+      style="@style/Widget.AppTheme.ProfileButton"
+      android:layout_width="65dp"
+      android:layout_height="65dp"
+      android:layout_marginTop="22dp"
+      android:layout_marginEnd="22dp"
+      android:background="@drawable/like"
+      android:fontFamily="@font/helvetica_neue_medium"
+      android:gravity="center"
+
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      android:textSize="13sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/profile_search_image" />
+
+  <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:orientation="vertical"
+      android:paddingLeft="30dp"
+      android:paddingTop="13dp"
+      android:paddingBottom="18dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      tools:layout_editor_absoluteX="-16dp">
+
+    <LinearLayout
+        android:id="@+id/mainview_information_view"
+        android:layout_width="match_parent" android:visibility="gone"
+        android:layout_height="wrap_content" android:orientation="vertical">
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/profile_search_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:paddingRight="8dp"
+            android:text="Profile name"
+            android:textColor="@color/slate"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profile_search_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:text="30"
+            android:textColor="@color/slate"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/profile_search_occupation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/helvetica_neue_medium"
+          android:paddingTop="7dp"
+          android:text="Location"
+          android:textColor="@color/slate"
+          android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/discover_information_view" android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+      <TextView
+          android:id="@+id/mainview_discover_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/helvetica_neue_medium"
+          android:paddingRight="8dp"
+          android:text="Craft Beer tasting bar hop"
+          android:textColor="@color/LightOrange"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+      <TextView
+          android:id="@+id/mainview_discover_subtitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/helvetica_neue_medium"
+          android:paddingTop="7dp"
+          android:text="Discover the best bars for craft beer in Porto!"
+          android:textColor="@color/slate"
+          android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/events_information_view" android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+      <TextView
+          android:id="@+id/mainview_events_organisation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/helvetica_neue_medium"
+          android:paddingRight="8dp"
+          android:textAllCaps="true"
+          android:text="MYFRIENDSROOM SOCIAL GROUP"
+          android:textColor="@color/commonGrey"
+          android:textSize="14sp" />
+      <TextView
+          android:id="@+id/mainview_events_datetime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/helvetica_neue_medium"
+          android:paddingTop="7dp"
+          android:text="Friday 26 July 2019, 21.00"
+          android:textColor="@color/tealish"
+          android:textSize="18sp" />
+      <TextView
+          android:id="@+id/mainview_events_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/helvetica_neue_medium"
+          android:paddingTop="7dp"
+          android:textStyle="bold"
+          android:text="Speed Meeting ‘mix-up’ Social Event"
+          android:textColor="@color/slate"
+          android:textSize="18sp" />
+      <TextView
+          android:id="@+id/mainview_events_location"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/helvetica_neue_medium"
+          android:paddingTop="7dp"
+          android:text="A Fabrica, Porto, Portugal"
+          android:textColor="@color/commonGrey"
+          android:textSize="15sp" />
+    </LinearLayout>
+    <!--<TextView
+        android:id="@+id/profile_search_occupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Occupation"
+        android:textColor="@color/CommonBlue"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="@+id/profile_name"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name"
+        tools:visibility="gone" />-->
+
+  </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

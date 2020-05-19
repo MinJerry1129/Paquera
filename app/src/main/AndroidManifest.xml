@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.blackcharm">
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+
+  <uses-feature
+      android:name="android.hardware.camera"
+      android:required="true" />
+
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity android:name=".InfoActivity"></activity>
+    <activity android:name=".ProfilePage.MembershipActivity" />
+    <activity android:name=".ImageViewpaperActivity" />
+    <activity
+        android:name=".PreviewActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ProfilePage.DiscoveryEditActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ProfilePage.DiscoveryActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ProfilePage.EventsEditActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ProfilePage.EventsActivity"
+        android:screenOrientation="portrait" />
+     <receiver
+     android:name=".FirebaseBackgroundService"
+     android:exported="true"
+     android:permission="com.google.android.c2dm.permission.SEND">
+     <intent-filter>
+     <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+     </intent-filter>
+     </receiver>
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/my_friends_room_logo_notification" />
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/CommonBlue" />
+
+    <service android:name=".MyFirebaseMessagingService">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+      </intent-filter>
+    </service>
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyChxF3wrDrHLCRsem-L1okrXSmMmgVLUMg" />
+
+    <uses-library android:name="com.google.android.maps" />
+
+    <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/facebook_app_id" />
+
+    <activity
+        android:name=".SplashActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/SplashTheme">
+      <intent-filter>
+        <action android:name="LatestMessagesActivity" />
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name="com.facebook.FacebookActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name="com.facebook.CustomTabActivity"
+        android:exported="true"
+        android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="@string/fb_login_protocol_scheme" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".registerlogin.RegisterLoginActivityMain"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".bottom_nav_pages.ContactPersonActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".registerlogin.WelcomeRegisterActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.registerlogin.RegisterLoginActivityMain" />
+    </activity>
+    <activity
+        android:name=".messages.LatestMessagesActivity"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="LatestMessagesActivity" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ProfilePage.ProfilePageActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".bottom_nav_pages.ContactsActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".bottom_nav_pages.InviteFriendsActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".bottom_nav_pages.ContactsTypeActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".bottom_nav_pages.FriendsLineActivityEmpty"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ProfilePage.ProfileSettings"
+        android:launchMode="singleTask"
+        android:parentActivityName=".messages.LatestMessagesActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".bottom_nav_pages.AdvancedSearch"
+        android:launchMode="singleTask"
+        android:parentActivityName=".messages.LatestMessagesActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.bottom_nav_pages.SearchActivity" />
+    </activity>
+    <activity android:name=".ProfilePage.ReportActivity">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:screenOrientation="portrait"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".ProfilePage.MyLikesActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".bottom_nav_pages.FullScreenImageActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".ProfilePage.PeopleLikeActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".ProfilePage.ProfilePicsActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".ProfilePage.ProfileHomePicsActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".ProfilePage.AlienProfilePageActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.bottom_nav_pages.FriendsLineActivityEmpty" />
+    </activity>
+    <activity
+        android:name=".discovery.DiscoveryDetailActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.bottom_nav_pages.FriendsLineActivityEmpty" />
+    </activity>
+    <activity
+        android:name=".events.EventsDetailActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.bottom_nav_pages.FriendsLineActivityEmpty" />
+    </activity>
+    <activity
+        android:name=".registerlogin.TermsScreen"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".NotificationHandler.NotificationMiddleActivity"
+        android:launchMode="singleTask"
+        android:parentActivityName=".messages.LatestMessagesActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.messages.LatestMessagesActivity" />
+
+      <intent-filter>
+        <action android:name="chat" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".messages.ChatLogActivity"
+        android:launchMode="singleTask"
+        android:parentActivityName=".messages.LatestMessagesActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity>
+    <activity
+        android:name=".messages.NewMessageActivity"
+        android:screenOrientation="portrait">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.blackcharm.ProfilePage.ProfilePageActivity" />
+    </activity> <!-- <provider -->
+    <!-- android:name="com.facebook.FacebookContentProvider" -->
+    <!-- android:authorities="com.facebook.app.FacebookContentProvider{306381180090160}" -->
+    <!-- android:exported="true" /> -->
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="com.blackcharm.fileprovider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/file_paths" />
+    </provider>
+  </application>
+
+</manifest>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alienProfileContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfilePage.ProfilePageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/alien_profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:subtitleTextColor="#f5fbff"
+        app:titleTextColor="#fff">
+
+        <TextView
+            android:id="@+id/alien_toolbar_profilename"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/LightOrange"
+            android:textSize="@dimen/_15ssp"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="11.5dp"
+                android:background="@color/pale_grey_two" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="27dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/friendsline_like_button"
+                    style="@style/Widget.AppTheme.ProfileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="100dp"
+                    android:background="@color/LightOrange"
+                    android:backgroundTint="@color/LightOrange"
+                    android:paddingLeft="28dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="27dp"
+                    android:paddingBottom="3dp"
+                    android:text="LIKE"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/alien_profile_add_delete_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textColor="@color/CommonBlue"
+                    android:textColorHint="@color/CommonBlue"
+                    android:textSize="@dimen/_13ssp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/alien_profile_activity_image"
+                    app:layout_constraintTop_toBottomOf="@+id/alien_profile_activity_image" />
+
+                <TextView
+                    android:id="@+id/alien_profile_friend_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/LightOrange"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/alien_profile_add_delete_button"
+                    app:layout_constraintTop_toBottomOf="@+id/alien_profile_add_delete_button" />
+
+                <Button
+                    android:id="@+id/friendsline_contact_button"
+                    style="@style/Widget.AppTheme.ProfileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="144dp"
+                    android:background="@color/commonGrey"
+                    android:backgroundTint="@color/commonGrey"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="3dp"
+                    android:text="CONTACT"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/alien_profile_activity_image"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="24.2dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/alien_profile_friend_of_friend_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text=""
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="@+id/alien_profile_friend_type"
+                            app:layout_constraintTop_toBottomOf="@+id/alien_profile_friend_type" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/bt_like"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"  android:layout_marginRight="30dp">
+
+                                <info.androidhive.fontawesome.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fa_heart"
+                                    android:textColor="@color/colorAlet"
+                                    android:textSize="36sp"
+                                    app:solid_icon="true" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Curtir"
+                                    android:textAlignment="center"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/bt_message"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" android:layout_marginRight="30dp">
+
+                                <info.androidhive.fontawesome.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fa_envelope"
+                                    android:textColor="@color/tealish"
+                                    android:textSize="36sp"
+                                    app:solid_icon="true" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="mensagem"
+                                    android:textAlignment="center"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/bt_friend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <info.androidhive.fontawesome.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fa_user_friends_solid"
+                                    android:textColor="@color/cloudy_blue"
+                                    android:textSize="36sp"
+                                    app:solid_icon="true" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="+amigo"
+                                    android:textAlignment="center"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/alien_profile_blocked_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Bloqueado"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/alien_profile_activity_image"
+                    app:layout_constraintTop_toBottomOf="@+id/alien_profile_activity_image" />
+
+                <TextView
+                    android:id="@+id/alien_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11.6dp"
+                    android:text="Nome do perfil"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/alien_profile_activity_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.1dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/alien_profile_activity_occupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Occupation"
+                    android:textColor="@color/CommonBlue"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/alien_profile_activity_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/alien_profile_activity_current_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Location"
+                    android:textSize="@dimen/_12ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9.8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/alien_profile_activity_guestaccept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accepting guests"
+                        android:textColor="@color/LightOrange"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/alien_profile_activity_dating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dating"
+                        android:textColor="@color/LightOrange"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/alien_profile_activity_meeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meeting Up"
+                        android:textColor="@color/LightOrange"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/alien_profile_activity_offerservice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About my services"
+                        android:textColor="@color/commonGrey"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/alien_profile_activity_offerservicetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web|email|phone"
+                        android:textColorLink="@color/commonGrey"
+                        android:textColor="@color/commonGrey"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/alien_profile_activity_about_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9.8dp"
+                    android:text="Sobre mim"
+                    android:textColor="@color/commonGrey"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/alien_profile_activity_about_me_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web|email|phone"
+                    android:text=""
+                    android:textColor="@color/commonGrey"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/alien_profile_activity_about_my_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9.8dp"
+                    android:text="Sobre minha casa"
+                    android:textColor="@color/commonGrey"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/alien_profile_activity_about_my_place_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web|email|phone"
+                    android:text=""
+                    android:textColor="@color/commonGrey"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="visible" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="20dp"
+                    android:id="@+id/profile_images_view_box"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="24dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

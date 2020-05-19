@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/contacts_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/LightOrange"
+        app:subtitleTextColor="#f5fbff" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp" app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/contacts_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contatos"
+            android:textColor="@color/LightOrange"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_15ssp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+  <ScrollView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="fill_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:layout_marginBottom="@dimen/_50ssp"
+      android:fitsSystemWindows="true"
+      app:layout_constraintTop_toBottomOf="@+id/contacts_toolbar"
+      tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_50ssp">
+        <Button
+            android:text="Somente amigos"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/contacts_friendsonly_button"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            app:layout_constraintTop_toBottomOf="@+id/contacts_toolbar"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/commonGrey"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contacts_friendsonly_counter"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/contacts_friendsonly_button"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/contacts_allcontacts_button"
+            android:textColor="@color/CommonBlue"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11ssp"/>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_50ssp">
+        <Button
+            android:text="Todos os contatos"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/contacts_allcontacts_button"
+            android:backgroundTint="@android:color/transparent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/contacts_friendsonly_button"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/commonGrey"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/contacts_allcontacts_counter"
+            android:textColor="@color/CommonBlue" android:textStyle="bold"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/contacts_allcontacts_button" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/contacts_friendsrequest_button"
+            android:textSize="@dimen/_11ssp"/>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_50ssp">
+        <Button
+            android:text="Pedidos de amigos"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" android:id="@+id/contacts_friendsrequest_button"
+            android:backgroundTint="@android:color/transparent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/contacts_allcontacts_button" android:textAlignment="viewStart"
+            android:textAllCaps="false" android:textSize="@dimen/_14ssp"
+            android:textColor="@color/commonGrey" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="60dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/contacts_friendsrequest_counter"
+            android:textColor="@color/CommonBlue" android:textStyle="bold"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/contacts_friendsrequest_button"
+            app:layout_constraintBottom_toBottomOf="@+id/contacts_friendsrequest_button"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            android:textSize="@dimen/_11ssp"/>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_50ssp">
+        <Button
+            android:text="Pedidos enviados"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" android:id="@+id/contacts_requestsent_button"
+            android:backgroundTint="@android:color/transparent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/contacts_friendsrequest_button"
+            android:textAlignment="viewStart" android:textSize="@dimen/_14ssp" android:textAllCaps="false"
+            android:textColor="@color/commonGrey" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="60dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/contacts_requestsent_counter"
+            android:textColor="@color/CommonBlue" android:textStyle="bold"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/contacts_requestsent_button"
+            app:layout_constraintBottom_toBottomOf="@+id/contacts_requestsent_button" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="@dimen/_11ssp"/>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_50ssp">
+        <Button
+            android:id="@+id/contacts_blacklist_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Bloqueados"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/commonGrey"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contacts_requestsent_button" />
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/contacts_blacklist_counter"
+            android:textColor="@color/CommonBlue" android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/contacts_blacklist_button"
+            app:layout_constraintBottom_toBottomOf="@+id/contacts_blacklist_button" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" android:layout_marginEnd="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/_11ssp"/>
+      </LinearLayout>
+
+      <TextView
+          android:text="Convide amigos da sua lista de contatos:"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" android:id="@+id/textView11"
+          app:layout_constraintTop_toBottomOf="@+id/contacts_blacklist_button"
+          app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+          android:textSize="@dimen/_14ssp" android:layout_marginTop="5dp" android:textColor="@color/commonGrey"/>
+
+      <Button
+          android:text="Whatsapp"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_40ssp"
+          android:id="@+id/contacts_whatsapp_button"
+          android:background="@drawable/rounded_corner_whatsapp"
+          android:textColor="@android:color/white"
+          android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
+          android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+          android:textSize="@dimen/_15ssp"
+          android:textAllCaps="false"
+          app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="16dp"
+          app:layout_constraintTop_toBottomOf="@+id/contacts_facebook_button"/>
+
+      <Button
+          android:text="Facebook messenger"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_40ssp"
+          android:id="@+id/contacts_facebook_button"
+          android:background="@drawable/rounded_corner_facebook"
+          android:textColor="@android:color/white"
+          android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
+          android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+
+          android:textSize="@dimen/_15ssp"
+          android:textAllCaps="false"
+          app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="12dp"
+          app:layout_constraintTop_toBottomOf="@+id/textView11"
+          />
+
+      <Button
+          android:text="Celular"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_40ssp"
+          android:id="@+id/contacts_phone_button"
+          android:background="@drawable/rounded_corner_phonecontacts"
+          android:textColor="@android:color/white"
+          android:layout_marginStart="16dp"
+          app:layout_constraintStart_toStartOf="parent"
+          android:layout_marginEnd="16dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:textSize="@dimen/_15ssp"
+          android:textAllCaps="false"
+          app:layout_constraintHorizontal_bias="0.0"
+          android:layout_marginTop="12dp"
+          app:layout_constraintTop_toBottomOf="@+id/contacts_whatsapp_button"/>
+
+    </LinearLayout>
+  </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

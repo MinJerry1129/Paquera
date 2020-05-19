@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bottomnav_searchline"
+        android:title="Home"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bottomnav_messages"
+        android:title="Mensagens"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bottomnav_search"
+        android:title="Procurar"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bottomnav_profile"
+        android:title="Perfil"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bottomnav_notifications"
+        android:title="notificações"
+        android:visible="true"
+        app:showAsAction="always" />
+
+</menu>

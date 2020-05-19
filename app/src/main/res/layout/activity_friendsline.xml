@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/friends_line"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/advanced_search_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="30dp"
+      android:background="?attr/colorPrimary"
+      android:minHeight="?attr/actionBarSize"
+      app:contentInsetLeft="0dp"
+      app:contentInsetStart="0dp"
+      app:subtitleTextColor="#f5fbff"
+      app:titleTextColor="#fff"
+      android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        app:srcCompat="@drawable/my_friends_room_logo"
+        tools:layout_editor_absoluteY="3dp"/>
+
+
+  </androidx.appcompat.widget.Toolbar>
+
+  <LinearLayout
+      android:id="@+id/buttonOptions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/cloudy_blue">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/stay_button"
+            style="@style/FoFSearchButtons"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="4.7dp"
+            android:layout_marginTop="8.2dp"
+            android:layout_marginRight="9.4dp"
+            android:layout_marginBottom="7.1dp"
+            android:background="@drawable/rounded_button_pale_grey_selected"
+            android:text="Explorar"
+            android:textColor="@color/battleship_grey" />
+
+        <Button
+            android:id="@+id/discover_view_button"
+            style="@style/FoFSearchButtons"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="9.4dp"
+            android:layout_marginBottom="7.1dp"
+            android:background="@drawable/rounded_button_orange_yellow"
+            android:text="Vitrine Black"/>
+
+        <Button
+            android:id="@+id/event_view_button"
+            style="@style/FoFSearchButtons"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8.2dp"
+            android:layout_marginRight="9.4dp"
+            android:layout_marginBottom="7.1dp"
+            android:background="@drawable/rounded_button_tealish"
+            android:text="eventos" />
+
+        <LinearLayout
+            android:id="@+id/linear_profile_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+      </LinearLayout>
+
+    </HorizontalScrollView>
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/txt_location"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/helvetica_neue_medium"
+      android:textStyle="bold"
+      android:paddingTop="8dp"
+      android:paddingBottom="8dp"
+      android:text="a"
+      android:textAlignment="center"
+      android:textColor="@color/slate" />
+
+  <com.blackcharm.common.VerticalViewPager
+      android:id="@+id/friendsline_view_pager_original"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+  </com.blackcharm.common.VerticalViewPager>
+
+
+</LinearLayout>
+

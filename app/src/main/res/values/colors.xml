@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#161B43</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorAlet">#FC0000</color>
+    <color name="CommonBlue">#161B43</color>
+    <color name="commonGrey">#686868</color>
+    <color name="LightOrange">#1b2e7d</color>
+    <color name="facebookColor">#3B5998</color>
+    <color name="whatsappColor">#5ED466</color>
+    <color name="instagramColor">#F46F30</color>
+    <color name="lightBlue">#D2F1F6</color>
+    <color name="DarkBlue">#2A93B2</color>
+
+    <!-- ZEPLIN -->
+    <color name="cloudy_blue">#161B43</color>
+    <color name="orange_yellow">#06a4a7</color>
+    <color name="orange_brown">#FF9800</color>
+    <color name="tealish">#E2508E</color>
+    <color name="pale_grey">#efeff5</color>
+    <color name="slate">#3d4d59</color>
+    <color name="white">#ffffff</color>
+    <color name="pale_grey_two">#e0e0eb</color>
+    <color name="battleship_grey">#6a7883</color>
+    <color name="cloudy_blue_two">#161B43</color>
+    <color name="white_two">#f0f0f0</color>
+    <color name="greyish">#a6a6a6</color>
+    <!-- /ZEPLIN -->
+    <color name="menu_icon_yellow">#ffd280</color>
+    <color name="plan_black_green">#043000</color>
+</resources>

@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">@dimen/_43ssp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">@dimen/_8ssp</dimen>
+</resources>
